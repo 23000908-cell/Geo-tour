@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MousePointer2, Info, Maximize2 } from "lucide-react";
+import { useLang } from "../context/LangContext";
 
 export function HeroVirtualTour() {
   const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
