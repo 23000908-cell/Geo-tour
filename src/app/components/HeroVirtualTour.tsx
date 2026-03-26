@@ -5,9 +5,13 @@ import { useLang } from "../context/LangContext";
 
 export function HeroVirtualTour() {
   const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
+import { useLang } from "../context/LangContext";
+
+export function HeroVirtualTour() {
+  const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
   const lang = useLang();
 
- 
+  const hotspots = []
   return (
     <div className="relative w-full h-full group overflow-hidden bg-[#1B3022]">
       {/* Immersive 360 Virtual Tour Link Layer */}
