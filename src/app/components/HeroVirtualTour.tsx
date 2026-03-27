@@ -5,13 +5,26 @@ import { useLang } from "../context/LangContext";
 
 export function HeroVirtualTour() {
   const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
-import { useLang } from "../context/LangContext";
-
-export function HeroVirtualTour() {
-  const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
   const lang = useLang();
 
-  const hotspots = []
+  const hotspots = [
+    { 
+      id: 1, x: 30, y: 40, 
+      title: lang === 'vi' ? "Quảng Trường Trung Tâm" : "Central Plaza", 
+      desc: lang === 'vi' ? "Khu vực tụ họp chính được xây dựng vào khoảng năm 200 TCN." : "The main gathering area constructed circa 200 BCE." 
+    },
+    { 
+      id: 2, x: 65, y: 55, 
+      title: lang === 'vi' ? "Tàn Tích Đền Thờ" : "Temple Ruins", 
+      desc: lang === 'vi' ? "Tàn tích của cấu trúc nghi lễ chính." : "Remnants of the primary ceremonial structure." 
+    },
+    { 
+      id: 3, x: 80, y: 30, 
+      title: lang === 'vi' ? "Cống Dẫn Nước Phía Bắc" : "Northern Aqueduct", 
+      desc: lang === 'vi' ? "Tàn tích hệ thống quản lý nước cổ đại." : "Ancient water management system remnants." 
+    },
+  ];
+
   return (
     <div className="relative w-full h-full group overflow-hidden bg-[#1B3022]">
       {/* Immersive 360 Virtual Tour Link Layer */}
